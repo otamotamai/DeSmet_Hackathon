@@ -10,10 +10,6 @@ function changeMenuItems(element){
   }
 }
 
-function addAccTot(item){
-
-}
-
 function addItem(item){
   menuCounter++;
   individualID = item;
@@ -82,6 +78,13 @@ function setBalance(balance){
 function getBalance(){
   return localStorage.getItem('balance');
 }
+
+function submitMenu(cost){
+  setBalance(getBalance() - cost);
+  $('#menu').html("");
+   $("#balance").html('<div>'+getBalance()+'<div>');
+}
+
 //localStorage.clear();
 if(!getBalance()){
   setBalance(200.00)
