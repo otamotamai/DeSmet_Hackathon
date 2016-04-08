@@ -19,7 +19,7 @@ function addItem(item){
   individualID = item;
   var itemId = 'item' + menuCounter;
 
-    $('#menu').append('<div id='+itemId+' class="row"><div class="col-md-offset-7">'+item+' <div onClick="removeItem(\''+itemId+'\')">  -- Remove</div></div></div>');
+    $('#menu').append('<div id='+itemId+' class="row"><div class="col-md-offset-4">'+item+' <div onClick="removeItem(\''+itemId+'\')">  -- Remove</div></div></div>');
 
     costs(item);
 }

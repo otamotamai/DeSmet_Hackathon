@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Hackathon|Account </title> <link rel="stylesheet" href="css/bootstrap.css">  </link>
+    <title> Hackathon </title> <link rel="stylesheet" href="css/bootstrap.css"> <link rel="stylesheet" href="css/desmet.css">  </link>
   </head>
   <body background="Pictures/Hackathon Background.png">
 
-    <div style="border-left:medium #111 solid; position:absolute; left:680px; height:3000px;">
-    </div>
 
   <div class="row">
     ""
@@ -63,30 +61,7 @@
   </div>
   <div class="row">
     <div class="col-md-offset-1">
-      <div id="balance" class="container-fluid">
-      </div>
-	<!-- HTML for SEARCH BAR -->
-	<div id="tfheader">
-		<form id="addAcTot" method="get" action="">
-		        <input type="text" size="21" maxlength="120"></input>
-		</form>
-	<div class="tfclear"></div>
-	</div>
+      To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+  To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
   </div>
-
   </div>
-</body>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/desmet.js"></script>
-
-
-<script>
- $(document).ready(function(){
-   var currentBalance = getBalance();
-   setBalance(currentBalance-10);
-   $("#balance").html('<div>'+getBalance()+'<div>');
- });
-</script>
-
-</html>
