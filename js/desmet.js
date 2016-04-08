@@ -1,5 +1,6 @@
 var menuCounter = 0;
 var cost = 0;
+var totalcost = 0;
 function changeMenuItems(element){
   $('#main').hide();
   $('#bev').hide();
@@ -13,14 +14,13 @@ function addItem(item){
   Food = item;
   var itemId = 'item'+menuCounter
 
-
-
-    $('#menu').append('<div id='+itemId+' class="row"><div class="col-md-offset-7">'+item+' <div onClick="removeItem(\''+itemId+'\')">   -- Remove</div></div></div>');
+    $('#menu').append('<div id='+itemId+' class="row"><div class="col-md-offset-7">'+item+' <div onClick="removeItem(\''+itemId+'\')">  -- Remove</div></div></div>');
 
     costs(Food);
 }
 
 function costs(input){
+
   if (input == 'Pizza........................$1.50'){
     cost = cost + 1.50;
   }
@@ -34,9 +34,10 @@ function costs(input){
     cost = cost + 2.00;
   }
 
-  //$('#total').remove(+cost+);
+  var totalcost = "$" + cost;
+  $('#total').empty();
 
-  $('#total').append('<div class="row"><div class="col-md-offset-7">' +cost+ '</div></div>');
+  $('#total').append('<div class="row"><div class="col-md-offset-7">' +totalcost+ '</div></div>');
 
 }
 
