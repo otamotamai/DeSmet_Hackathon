@@ -10,7 +10,7 @@ function changeMenuItems(element){
 }
 
 function addAccTot(item){
-  
+
 }
 
 function addItem(item){
@@ -49,4 +49,16 @@ function removeItem(itemId){
   console.log(itemId);
   $("#"+itemId).remove();
   console.log('test');
+}
+
+function setBalance(balance){
+  localStorage.setItem('balance',balance);
+}
+
+function getBalance(){
+  return localStorage.getItem('balance');
+}
+//localStorage.clear();
+if(!getBalance()){
+  setBalance(200.00)
 }

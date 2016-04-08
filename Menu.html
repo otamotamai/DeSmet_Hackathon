@@ -58,24 +58,25 @@
   </div>
 
   <div class="row">
-  <div class="col-md-offset-1">
-   <form>
-     <select id="foodTypes">
-       <option>
-         Select Food Type
-       </option>
-       <option value="main">
-         Main Courses
-       </option>
-       <option value="bev">
-         Drinks
-       </option>
-     </select>
-   </form>
+  <div class="col-md-6">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-1">
+     <form>
+       <select id="foodTypes">
+         <option>
+           Select Food Type
+         </option>
+         <option value="main">
+           Main Courses
+         </option>
+         <option value="bev">
+           Drinks
+         </option>
+       </select>
+     </form>
+    </div>
   </div>
-</div>
-
-
 
   <div id="main" class="container-fluid" style="display:none">
     <div class="row">
@@ -88,7 +89,6 @@
     </div>
   </div>
 
-
   <div id="bev" class="container-fluid" style="display:none">
     <div class="row">
       <img class="col-md-offset-2" src="Pictures/coke.png" height="75" width="75">
@@ -99,19 +99,19 @@
      <div class="col-md-offset-1" onclick="addItem('Tea.....................$2.00')">Tea.....................$2.00</div>
     </div>
   </div>
-
-<div id="total" class="container-fluid">
+</div>
 </div>
 
+<div class="col-md-6"> 
+<div class="container-fluid">
 <div id="menu" class="container-fluid">
 </div>
 <div id="total" class="container-fluid">
 </div>
-
-
-
-
-
+<div id="balance" class="container-fluid">
+</div>
+</div>
+</div>
   </body>
 
 
@@ -125,8 +125,9 @@
      $("#foodTypes").change(function(){
        console.log(this);
        changeMenuItems(this.value);
-     })
-   })
+     });
+     $("#balance").html('<div>'+getBalance()+'<div>');
+   });
   </script>
 
 </html>
