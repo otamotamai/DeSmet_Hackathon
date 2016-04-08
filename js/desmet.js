@@ -13,6 +13,8 @@ function addItem(item){
   Food = item;
   var itemId = 'item'+menuCounter
 
+
+
     $('#menu').append('<div id='+itemId+' class="row"><div class="col-md-offset-7">'+item+' <div onClick="removeItem(\''+itemId+'\')">   -- Remove</div></div></div>');
 
     costs(Food);
@@ -32,7 +34,9 @@ function costs(input){
     cost = cost + 2.00;
   }
 
-  $('#menu').append('<div class="row"><div class="col-md-offset-7">' +cost+ '</div></div>');
+  //$('#total').remove(+cost+);
+
+  $('#total').append('<div class="row"><div class="col-md-offset-7">' +cost+ '</div></div>');
 
 }
 
