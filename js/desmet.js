@@ -9,6 +9,10 @@ function changeMenuItems(element){
   }
 }
 
+function addAccTot(item){
+  
+}
+
 function addItem(item){
   menuCounter++;
   Food = item;
