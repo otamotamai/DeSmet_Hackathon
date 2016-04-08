@@ -1,6 +1,7 @@
 var menuCounter = 0;
 var cost = 0;
 var totalcost = 0;
+var individualID = "null";
 function changeMenuItems(element){
   $('#main').hide();
   $('#bev').hide();
@@ -15,12 +16,12 @@ function addAccTot(item){
 
 function addItem(item){
   menuCounter++;
-  Food = item;
-  var itemId = 'item'+menuCounter
+  individualID = item;
+  var itemId = 'item' + menuCounter;
 
     $('#menu').append('<div id='+itemId+' class="row"><div class="col-md-offset-7">'+item+' <div onClick="removeItem(\''+itemId+'\')">  -- Remove</div></div></div>');
 
-    costs(Food);
+    costs(item);
 }
 
 function costs(input){
@@ -38,7 +39,7 @@ function costs(input){
     cost = cost + 2.00;
   }
 
-  var totalcost = "$" + cost;
+  totalcost = "$" + cost;
   $('#total').empty();
 
   $('#total').append('<div class="row"><div class="col-md-offset-7">' +totalcost+ '</div></div>');
@@ -46,9 +47,32 @@ function costs(input){
 }
 
 function removeItem(itemId){
-  console.log(itemId);
+  //console.log(itemId);
+  //console.log('test');
+
   $("#"+itemId).remove();
-  console.log('test');
+
+  if (individualID == 'Pizza........................$1.50'){
+    cost = cost - 1.50;
+  }
+  if (individualID == 'Hamburger...............$3.00'){
+    cost = cost - 3.00;
+  }
+  if (individualID == 'Coke....................$0.50'){
+    cost = cost - 0.50;
+  }
+  if (individualID == 'Tea.....................$2.00'){
+    cost = cost - 2.00;
+  }
+
+
+  totalcost = "$" + cost;
+
+  $('#total').empty();
+
+  $('#total').append('<div class="row"><div class="col-md-offset-7">' +totalcost+ '</div></div>');
+
+
 }
 
 function setBalance(balance){
