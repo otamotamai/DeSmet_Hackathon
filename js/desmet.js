@@ -35,7 +35,8 @@ function costs(input){
     cost = cost + 2.00;
   }
 
-  totalcost = "Total: $" + cost;
+  totalcost = "$" + cost;
+  setCost(cost);
   $('#total').empty();
 
   $('#total').append('<div class="row"><div class="col-md-offset-7">' +totalcost+ '</div></div>');
@@ -63,6 +64,7 @@ function removeItem(itemId){
 
 
   totalcost = "$" + cost;
+  setCost(cost);
 
   $('#total').empty();
 
@@ -85,7 +87,24 @@ function submitMenu(cost){
    $("#balance").html('<div>'+getBalance()+'<div>');
 }
 
+function setCost(C){
+  localStorage.setItem('MONEY',C);
+}
+
+function getCost(){
+  return localStorage.getItem('MONEY');
+}
+
+if(!getCost()){
+  setCost(0.00);
+}
+
 //localStorage.clear();
 if(!getBalance()){
   setBalance(200.00)
+}
+
+function getNewBalance(){
+  return getBalance()-getCost();
+
 }
