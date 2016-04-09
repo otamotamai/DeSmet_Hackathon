@@ -108,3 +108,6 @@ function getNewBalance(){
   return getBalance()-getCost();
 
 }
+function muffinButton(){
+  return getBalance()+x;
+}
