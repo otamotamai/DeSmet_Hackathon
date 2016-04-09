@@ -45,3 +45,18 @@
     <a link href="\Hackathon\DeSmet_Hackathon\Account.html">Account</a>
   </div>
 </div>
+
+</body>
+
+<script>
+ $(document).ready(function(){
+   $("#foodTypes").change(function(){
+     console.log(this);
+     changeMenuItems(this.value);
+   });
+
+   $("#balance").html('<div>'+getBalance()+'<div>');``
+ });
+</script>
+
+</html>
