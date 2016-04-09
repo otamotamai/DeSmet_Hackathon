@@ -77,7 +77,7 @@
 //var currentBalance;
 function myFunction() {
     var x = document.getElementById("myNumber").value;
-    x += getNewBalance();
+    x = getNewBalance() + x;
     document.getElementById("demo").innerHTML = x;
 }
 
