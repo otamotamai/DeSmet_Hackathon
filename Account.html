@@ -50,16 +50,12 @@
     ""
   </div>
   <div class="col-md-offset-1">
-    <h3>A demonstration of how to access a Number field</h3>
+    <h3>Add funds to your account:</h3>
 
     <input type="number" id="myNumber" value="2">
-
-    <p>Click the button to get the number of the number field.</p>
-
-    <button onclick="myFunction()">Muffin Button</button>
-
-    <p><strong>Note:</strong> input elements with type="number" are not supported in IE 9 and earlier versions.</p>
-
+      <div class="row">
+          <button onclick="myFunction()">Add</button
+      </div>
     <p id="demo"></p>
   </div>
 
@@ -77,11 +73,7 @@
 //var currentBalance;
 function myFunction() {
     var x = document.getElementById("myNumber").value;
-<<<<<<< HEAD
-
-=======
     x = getBalance() + x;
->>>>>>> origin/master
     document.getElementById("demo").innerHTML = x;
 }
 
