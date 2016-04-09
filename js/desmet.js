@@ -28,7 +28,7 @@ function costs(input){
   if (input == 'Hamburger...............$3.00'){
     cost = cost + 3.00;
   }
-  if (input == 'Coke....................$0.50'){
+  if (input == 'Soft Drink....................$0.50'){
     cost = cost + 0.50;
   }
   if (input == 'Tea.....................$2.00'){
@@ -55,7 +55,7 @@ function removeItem(itemId){
   if (individualID == 'Hamburger...............$3.00'){
     cost = cost - 3.00;
   }
-  if (individualID == 'Coke....................$0.50'){
+  if (individualID == 'Soft Drink....................$0.50'){
     cost = cost - 0.50;
   }
   if (individualID == 'Tea.....................$2.00'){
