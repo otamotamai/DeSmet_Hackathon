@@ -35,7 +35,7 @@ function costs(input){
     cost = cost + 2.00;
   }
 
-  totalcost = "$" + cost;
+  totalcost = "Total: $" + cost;
   $('#total').empty();
 
   $('#total').append('<div class="row"><div class="col-md-offset-7">' +totalcost+ '</div></div>');
