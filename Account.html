@@ -50,22 +50,22 @@
     ""
   </div>
   <div class="col-md-offset-1">
-  Deposit: <input type="number"><br>
-  <input type="submit" value="Submit" onClick="setBalance()">
+    <h3>A demonstration of how to access a Number field</h3>
+
+    <input type="number" id="myNumber" value="2">
+
+    <p>Click the button to get the number of the number field.</p>
+
+    <button onclick="myFunction()">Muffin Button</button>
+
+    <p><strong>Note:</strong> input elements with type="number" are not supported in IE 9 and earlier versions.</p>
+
+    <p id="demo"></p>
+  </div>
+
+    <div id="test" class="container-fluid">
 </div>
-  <div class="row">
-    ""
-  </div>
-  <div class="row">
-    ""
-  </div>
-  <div class="row">
-    ""
-  </div>
-  <div class="row">
-    <div class="col-md-offset-1">
-  </div>
-  </div>
+
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -75,12 +75,18 @@
 <script>
 <!--
 //var currentBalance;
+function myFunction() {
+    var x = document.getElementById("myNumber").value;
+    x = getBalance() + x;
+    document.getElementById("demo").innerHTML = x;
+}
+
 
   //<var balance="setBalance">
- $(document).ready(function(){
+ //$(document).ready(function(){
     //currentBalance = getBalance();
    //setBalance(currentBalance);
-   $("#balance").html('<div>'+getBalance()+'<div>');
- });
-</script>
+   $("#test").html('<div>'+getBalance()+'<div>');
+ //});
+ </script>
 </html>
