@@ -5,7 +5,6 @@
   </head>
   <body background="Pictures/Hackathon Background.png">
 
-
   <div class="row">
     ""
   </div>
@@ -50,6 +49,10 @@
   <div class="row">
     ""
   </div>
+  <div class="col-md-offset-1">
+  Deposit: <input type="number"><br>
+  <input type="submit" value="Submit" onClick="setBalance()">
+</div>
   <div class="row">
     ""
   </div>
@@ -61,8 +64,6 @@
   </div>
   <div class="row">
     <div class="col-md-offset-1">
-      To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-  To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
   </div>
   </div>
 </body>
@@ -72,12 +73,14 @@
 
 
 <script>
+<!--
+//var currentBalance;
+
+  //<var balance="setBalance">
  $(document).ready(function(){
-   var currentBalance = getBalance();
-   setBalance(currentBalance);
+    //currentBalance = getBalance();
+   //setBalance(currentBalance);
    $("#balance").html('<div>'+getBalance()+'<div>');
  });
 </script>
-
-
 </html>

@@ -67,13 +67,23 @@
 <script src="js/desmet.js"></script>
 
 <script>
-//IMPORTANT!!!!!! IF THE BALANCE DISSAPEARS FROM CHECKOUT THEN JUST UNCOMMENT THE TWO BOTTME LINES RUN MENU AGAIN AND IT WILL WORK
-//setBalance(200.00);
-//setCost(0.00);
-var NewBalance = getBalance() - getCost();
-$("#balance").html('<div class="row"><div class="col-md-offset-1"><font size="4">  Your Balance: '+getBalance()+'</font></div></div>');
-$("#balance").append('<div class="row"><div class="col-md-offset-1"><font size="4"> Total Cost: '+getCost()+'</font></div></div>');
-$("#balance").append('<div class="row"><div class="col-md-offset-1"><font size="4"> New Balance: ' +getNewBalance()+ '</font></div></div>');
+
+ $(document).ready(function(){
+   $("#foodTypes").change(function(){
+     console.log(this);
+     changeMenuItems(this.value);
+   });
+
+   $("#balance").html('<div>'+getBalance()+'<div>');``
+ });
+
+ //IMPORTANT!!!!!! IF THE BALANCE DISSAPEARS FROM CHECKOUT THEN JUST UNCOMMENT THE TWO BOTTME LINES RUN MENU AGAIN AND IT WILL WORK
+ //setBalance(200.00);
+ //setCost(0.00);
+ var NewBalance = getBalance() - getCost();
+ $("#balance").html('<div class="row"><div class="col-md-offset-1"><font size="4">  Your Balance: '+getBalance()+'</font></div></div>');
+ $("#balance").append('<div class="row"><div class="col-md-offset-1"><font size="4"> Total Cost: '+getCost()+'</font></div></div>');
+ $("#balance").append('<div class="row"><div class="col-md-offset-1"><font size="4"> New Balance: ' +getNewBalance()+ '</font></div></div>');
 </script>
 
 </html>
